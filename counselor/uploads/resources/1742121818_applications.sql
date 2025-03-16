@@ -1,0 +1,2 @@
+CREATE TABLE "applications" ("id" integer primary key autoincrement not null, "job_id" integer not null, "user_id" integer not null, "cover_letter" text not null, "resume_path" varchar not null, "status" varchar check ("status" in ('pending', 'accepted', 'rejected')) not null default 'pending', "created_at" datetime, "updated_at" datetime, foreign key("job_id") references "jobs_openings"("id") on delete cascade, foreign key("user_id") references "users"("id") on delete cascade);
+

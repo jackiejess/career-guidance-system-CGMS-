@@ -1,0 +1,207 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Light Mode */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --sidebar-color: #2c3e50;
+    --card-bg: white;
+    --button-bg: #1abc9c;
+    --button-hover: #16a085;
+}
+
+/* Softer Dark Mode */
+.dark-mode {
+    --bg-color: #2b2b2b;
+    --text-color: #e0e0e0;
+    --sidebar-color: #1e1e1e;
+    --card-bg: #3a3a3a;
+    --button-bg: #f39c12;
+    --button-hover: #e67e22;
+}
+
+body {
+    display: flex;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: var(--sidebar-color);
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover {
+    background: var(--button-bg);
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 260px;
+    padding: 20px;
+    width: calc(100% - 260px);
+}
+
+/* Header */
+header {
+    background: var(--card-bg);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+/* Header Right (Profile & Theme Toggle) */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Theme Toggle Button */
+#themeToggle {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* Profile Section */
+.profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--button-bg);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: var(--card-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 150px;
+    display: none;
+    flex-direction: column;
+}
+
+.dropdown a {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+.dropdown a:hover {
+    background: var(--button-bg);
+    color: white;
+}
+
+/* Show dropdown when active */
+.dropdown.active {
+    display: flex;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.card i {
+    font-size: 40px;
+    color: var(--button-bg);
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.card a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: var(--button-bg);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    background: var(--button-hover);
+}

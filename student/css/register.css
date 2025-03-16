@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Container for the Registration Form */
+.register-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Heading */
+.register-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #6200ea;
+}
+
+/* Form Input Fields */
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="password"],
+.register-container input[type="file"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.register-container input[type="text"]:focus,
+.register-container input[type="email"]:focus,
+.register-container input[type="password"]:focus,
+.register-container input[type="file"]:focus {
+    border-color: #6200ea;
+}
+
+/* File Upload Styling */
+.register-container label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.register-container input[type="file"] {
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+/* Register Button */
+.register-container button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1.5rem;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-container button[type="submit"]:hover {
+    background-color: #3700b3;
+}
+
+/* Link to Login Page */
+.register-container p {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.register-container a {
+    color: #6200ea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-container a:hover {
+    color: #3700b3;
+}
+
+/* Error Messages */
+.error-message {
+    color: #ff4081;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
